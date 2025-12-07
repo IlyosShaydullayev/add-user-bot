@@ -14,6 +14,9 @@ bot.telegram.setMyCommands([
 // Kanal ID (.env faylida saqlash kerak)
 const CHANNEL_ID = process.env.CHANNEL_ID; // Masalan: -1001234567890
 
+// Admin ID lari
+const ADMIN_IDS = process.env.ADMIN_IDS ? process.env.ADMIN_IDS.split(',').map(id => parseInt(id.trim())) : [];
+
 // Foydalanuvchilar va ularning linklari
 const userLinks = new Map(); // userId -> {link, inviteCount, referrals: []}
 const linkToUser = new Map(); // link -> userId
@@ -199,18 +202,50 @@ bot.command('top', (ctx) => {
   }
 });
 
-// Admin statistikasi
-bot.command('adminstats', (ctx) => {
+// Admin statistikasi (faqat owner va adminlar uchun)
+bot.command('adminstats', async (ctx) => {
   try {
-    let message = '📊 Umumiy statistika:\n\n';
+    const userId = ctx.from.id;
+    
+    // Kanal owner yoki adminligini tekshirish
+    let isAdmin = false;
+    try {
+      const member = await ctx.telegram.getChatMember(CHANNEL_ID, userId);
+      isAdmin = ['creator', 'administrator'].includes(member.status) || ADMIN_IDS.includes(userId);
+    } catch (error) {
+      console.error('Admin tekshirish xatoligi:', error);
+    }
+    
+    if (!isAdmin) {
+      return ctx.reply('❌ Bu komanda faqat kanal adminlari uchun!');
+    }
+
+    let message = '📊 KANAL STATISTIKASI\n\n';
     message += `👥 Jami foydalanuvchilar: ${userLinks.size} ta\n`;
     
     let totalInvites = 0;
+    let activeUsers = 0;
     userLinks.forEach(data => {
       totalInvites += data.inviteCount;
+      if (data.inviteCount > 0) activeUsers++;
     });
     
     message += `🔗 Jami taklif qilinganlar: ${totalInvites} ta\n`;
+    message += `⭐ Faol referrerlar: ${activeUsers} ta\n\n`;
+    
+    // Top 5 referrerlar
+    const topUsers = Array.from(userLinks.entries())
+      .map(([userId, data]) => ({ userId, ...data }))
+      .sort((a, b) => b.inviteCount - a.inviteCount)
+      .slice(0, 5);
+    
+    if (topUsers.length > 0) {
+      message += '🏆 TOP 5 Referrerlar:\n';
+      topUsers.forEach((user, index) => {
+        const emoji = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`;
+        message += `${emoji} ${user.userName} - ${user.inviteCount} ball\n`;
+      });
+    }
 
     ctx.reply(message);
 
@@ -310,6 +345,51 @@ bot.on('chat_member', async (ctx) => {
       }
     } else {
       console.log(`ℹ️ Status o'zgarishi: ${oldStatus} -> ${newStatus} (yangi a'zo emas)`);
+    }
+    
+    // Kanaldan chiqsa ball ayirish
+    if ((oldStatus === 'member' || oldStatus === 'administrator') && 
+        (newStatus === 'left' || newStatus === 'kicked' || newStatus === 'banned')) {
+      
+      const leftUser = update.new_chat_member.user;
+      const leftUserId = leftUser.id;
+      const leftUserName = leftUser.first_name + (leftUser.last_name ? ' ' + leftUser.last_name : '');
+      
+      console.log(`⚠️ A'zo chiqdi: ${leftUserName} (${leftUserId})`);
+      
+      // Bu foydalanuvchini kim taklif qilgan?
+      userLinks.forEach((referrerData, referrerId) => {
+        const referralIndex = referrerData.referrals.findIndex(r => r.userId === leftUserId);
+        
+        if (referralIndex !== -1) {
+          // Ball ayirish
+          if (referrerData.inviteCount > 0) {
+            referrerData.inviteCount--;
+          }
+          
+          // Referrallar ro'yxatidan o'chirish
+          const removedReferral = referrerData.referrals.splice(referralIndex, 1)[0];
+          
+          userLinks.set(referrerId, referrerData);
+          
+          console.log(`➖ ${referrerData.userName} dan -1 ball ayrildi! Qoldi: ${referrerData.inviteCount}`);
+          
+          // Referrerga xabar yuborish
+          try {
+            ctx.telegram.sendMessage(
+              referrerId,
+              `⚠️ Xabardorlik!\n\n` +
+              `👤 ${leftUserName} kanaldan chiqib ketdi.\n\n` +
+              `➖ -1 ball\n` +
+              `⭐ Sizning ballingiz: ${referrerData.inviteCount}\n\n` +
+              `📊 /stats - Statistikani ko'rish`
+            );
+            console.log(`📨 Xabar yuborildi (chiqish): ${referrerId}`);
+          } catch (msgError) {
+            console.error('❌ Xabar yuborishda xatolik:', msgError);
+          }
+        }
+      });
     }
   } catch (error) {
     console.error('Chat member update xatoligi:', error);
