@@ -53,11 +53,14 @@ bot.start(async (ctx) => {
     // 3. Agar a'zo bo'lsa va linkı yo'q bo'lsa - yangi link yaratish
     if (!userLinks.has(userId)) {
       try {
+        console.log(`🔗 Link yaratish boshlandi: User ${userId}, Kanal ${CHANNEL_ID}`);
+        
         // Unikal invite link yaratish (permanent, cheksiz)
-        const inviteLink = await ctx.telegram.createChatInviteLink(CHANNEL_ID, {
-          name: `${userName} referral`
-          // member_limit va expire_date qo'ymaslik - cheksiz bo'ladi
-        });
+        // Faqat zaruriy parametrlar - link cheksiz bo'ladi
+        const inviteLink = await ctx.telegram.createChatInviteLink(CHANNEL_ID);
+        
+        console.log(`✅ Link yaratildi: ${inviteLink.invite_link}`);
+        console.log(`📋 Link ma'lumotlari:`, JSON.stringify(inviteLink, null, 2));
 
         // Foydalanuvchi ma'lumotlarini saqlash
         userLinks.set(userId, {
@@ -84,8 +87,20 @@ bot.start(async (ctx) => {
         console.log(`✅ Yangi foydalanuvchi: ${userName} (${userId})`);
 
       } catch (error) {
-        console.error('Link yaratishda xatolik:', error);
-        return ctx.reply('❌ Link yaratishda xatolik yuz berdi. Bot kanalda admin ekanligini tekshiring!');
+        console.error('❌ Link yaratishda xatolik:', error);
+        console.error('Error details:', {
+          message: error.message,
+          response: error.response?.description,
+          statusCode: error.response?.error_code
+        });
+        return ctx.reply(
+          '❌ Link yaratishda xatolik yuz berdi!\n\n' +
+          'Sabablari:\n' +
+          '1. Bot kanalda admin emas\n' +
+          '2. Bot "Invite Users via Link" huquqiga ega emas\n' +
+          '3. Kanal ID noto\'g\'ri: ' + CHANNEL_ID + '\n\n' +
+          'Iltimos, botni qayta sozlang!'
+        );
       }
     } else {
       // Agar link mavjud bo'lsa - mavjud linkni ko'rsatish
