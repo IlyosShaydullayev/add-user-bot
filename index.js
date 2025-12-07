@@ -53,10 +53,10 @@ bot.start(async (ctx) => {
     // 3. Agar a'zo bo'lsa va linkı yo'q bo'lsa - yangi link yaratish
     if (!userLinks.has(userId)) {
       try {
-        // Unikal invite link yaratish
+        // Unikal invite link yaratish (permanent, cheksiz)
         const inviteLink = await ctx.telegram.createChatInviteLink(CHANNEL_ID, {
-          name: `${userName} referral`,
-          creates_join_request: false
+          name: `${userName} referral`
+          // member_limit va expire_date qo'ymaslik - cheksiz bo'ladi
         });
 
         // Foydalanuvchi ma'lumotlarini saqlash
