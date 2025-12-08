@@ -2,8 +2,8 @@
   "userLinks": {
     "6546884474": {
       "userName": "Маржона Режабова",
-      "userUsername": "@niillues",
-      "inviteCount": 20,
+      "userUsername": "",
+      "inviteCount": 21,
       "referrals": [
         {
           "userId": 8459472632,
@@ -51,18 +51,43 @@
           "joinedAt": "2025-12-08T16:04:21.417979768Z"
         },
         {
-          "userId": 7530162987,
-          "name": "fayzullayevnas_17",
-          "joinedAt": "2025-12-08T17:27:03.898Z"
+          "userId": 8151931562,
+          "name": "Shahnoza Turayeva",
+          "joinedAt": "2025-12-08T15:29:21.998746193Z"
         },
         {
-          "userId": 7655756748,
-          "name": "𝓃́",
-          "joinedAt": "2025-12-08T17:31:17.867Z"
+          "userId": 6586186500,
+          "name": "🐚",
+          "joinedAt": "2025-12-08T15:29:21.999984102Z"
+        },
+        {
+          "userId": 7670858921,
+          "name": "Тургунова",
+          "joinedAt": "2025-12-08T15:32:32.895356161Z"
+        },
+        {
+          "userId": 7850375038,
+          "name": "Zebo Allamurodova",
+          "joinedAt": "2025-12-08T15:35:52.689931699Z"
+        },
+        {
+          "userId": 8228676608,
+          "name": "Nilufar",
+          "joinedAt": "2025-12-08T15:36:11.805611436Z"
+        },
+        {
+          "userId": 1344979601,
+          "name": "Jabborova",
+          "joinedAt": "2025-12-08T15:36:31.799966554Z"
+        },
+        {
+          "userId": 6820814728,
+          "name": "『』",
+          "joinedAt": "2025-12-08T17:53:49.674096392Z"
         }
       ],
       "createdAt": "2025-12-08T15:39:32.148930658Z",
-      "link": "https://t.me/+znN8DRAT651jYjRi"
+      "link": "https://t.me/+Oq6BI1cwT_RjZDMy"
     },
     "8440030296": {
       "userName": "🎀",
@@ -103,52 +128,217 @@
           "userId": 8379219900,
           "name": "Nastarin",
           "joinedAt": "2025-12-08T16:05:01.658372773Z"
+        },
+        {
+          "userId": 1066228233,
+          "name": "Xaydarova Saida",
+          "joinedAt": "2025-12-08T16:06:22.261784959Z"
         }
       ],
       "createdAt": "2025-12-08T15:39:32.148951529Z",
-      "link": "https://t.me/+kEUf9DqqtolmZWEy"
+      "link": "https://t.me/+z2muAfLjE4JiMjVi"
     },
     "8447983190": {
       "userName": "Abdunazarova Nilufar",
       "userUsername": "",
-      "inviteCount": 14,
+      "inviteCount": 13,
       "referrals": [
         {
           "userId": 7986483755,
           "name": "Muhayyo",
           "joinedAt": "2025-12-08T15:43:21.256422572Z"
+        },
+        {
+          "userId": 8263491669,
+          "name": "Фарангиз🫐",
+          "joinedAt": "2025-12-08T12:58:29.029069133Z"
+        },
+        {
+          "userId": 8449740696,
+          "name": "Sug'diyona",
+          "joinedAt": "2025-12-08T13:06:11.221630402Z"
+        },
+        {
+          "userId": 8440030296,
+          "name": "🎀",
+          "joinedAt": "2025-12-08T13:26:25.826090297Z"
+        },
+        {
+          "userId": 7603495175,
+          "name": "Manzura Xurramova",
+          "joinedAt": "2025-12-08T13:33:27.624345214Z"
+        },
+        {
+          "userId": 8281645926,
+          "name": "🤍",
+          "joinedAt": "2025-12-08T13:46:11.129393044Z"
+        },
+        {
+          "userId": 6874203977,
+          "name": "Dildora Karimovna🧸",
+          "joinedAt": "2025-12-08T14:00:08.214107243Z"
+        },
+        {
+          "userId": 8463365652,
+          "name": "Abrorjon",
+          "joinedAt": "2025-12-08T14:16:38.600644341Z"
+        },
+        {
+          "userId": 8360221484,
+          "name": ".",
+          "joinedAt": "2025-12-08T14:36:23.572473355Z"
+        },
+        {
+          "userId": 7758211821,
+          "name": "Rayhon",
+          "joinedAt": "2025-12-08T14:37:13.766758067Z"
+        },
+        {
+          "userId": 8440033106,
+          "name": "𝓜𝓪𝓯𝓽𝓾𝓷𝓪_✨",
+          "joinedAt": "2025-12-08T14:39:15.090666829Z"
+        },
+        {
+          "userId": 7131651366,
+          "name": "🌷",
+          "joinedAt": "2025-12-08T15:02:14.555030901Z"
+        },
+        {
+          "userId": 6600901424,
+          "name": "Hulkar Muzaffarovna🎀",
+          "joinedAt": "2025-12-08T15:24:03.012954169Z"
         }
       ],
       "createdAt": "2025-12-08T15:43:21.256422572Z",
       "link": "https://t.me/+v9rXrl-0nzwzY2Ey"
     },
     "8112698547": {
-      "userName": "Abdunazarova Nilufar",
-      "userUsername": "",
+      "userName": "Mahliyo",
+      "userUsername": null,
       "inviteCount": 20,
       "referrals": [
         {
           "userId": 8365095933,
           "name": "G.🧸",
           "joinedAt": "2025-12-08T15:51:32.290355357Z"
+        },
+        {
+          "userId": 8387141533,
+          "name": "Ирода",
+          "joinedAt": "2025-12-08T14:41:45.952621537Z"
+        },
+        {
+          "userId": 7984136812,
+          "name": "Akramovna",
+          "joinedAt": "2025-12-08T14:42:15.158914546Z"
+        },
+        {
+          "userId": 6681682683,
+          "name": "🕊",
+          "joinedAt": "2025-12-08T14:42:45.210157337Z"
+        },
+        {
+          "userId": 6227759388,
+          "name": "Ochilova💙",
+          "joinedAt": "2025-12-08T14:47:38.709812042Z"
+        },
+        {
+          "userId": 8161797492,
+          "name": "❤️",
+          "joinedAt": "2025-12-08T14:48:38.155469670Z"
+        },
+        {
+          "userId": 7501409681,
+          "name": "🎀Rayhon🎀",
+          "joinedAt": "2025-12-08T14:50:26.543169027Z"
+        },
+        {
+          "userId": 7945177418,
+          "name": "✨",
+          "joinedAt": "2025-12-08T14:54:26.324769393Z"
+        },
+        {
+          "userId": 5628263663,
+          "name": "Mohinur",
+          "joinedAt": "2025-12-08T14:56:56.740419152Z"
+        },
+        {
+          "userId": 8346830795,
+          "name": ".",
+          "joinedAt": "2025-12-08T15:00:06.442715933Z"
+        },
+        {
+          "userId": 7982858466,
+          "name": "To'xtayeva Aziza",
+          "joinedAt": "2025-12-08T15:01:06.123206927Z"
+        },
+        {
+          "userId": 7920225424,
+          "name": "Gulzoda Bahromovna",
+          "joinedAt": "2025-12-08T15:01:12.723675182Z"
+        },
+        {
+          "userId": 5672017188,
+          "name": "Gulsevar To'laboyeva",
+          "joinedAt": "2025-12-08T15:03:24.307092354Z"
+        },
+        {
+          "userId": 8123695959,
+          "name": "N.N",
+          "joinedAt": "2025-12-08T15:09:06.270715582Z"
+        },
+        {
+          "userId": 8034796384,
+          "name": "Боймуродова🕊",
+          "joinedAt": "2025-12-08T15:10:20.330042823Z"
+        },
+        {
+          "userId": 6261437696,
+          "name": "Mohira Bahodirova",
+          "joinedAt": "2025-12-08T15:12:31.413175306Z"
+        },
+        {
+          "userId": 7798042986,
+          "name": "Шахина",
+          "joinedAt": "2025-12-08T15:14:21.765528879Z"
+        },
+        {
+          "userId": 7974243279,
+          "name": "💙",
+          "joinedAt": "2025-12-08T15:15:12.135448459Z"
+        },
+        {
+          "userId": 5133444486,
+          "name": "𝙋𝙖𝙧𝙙𝙖𝙮𝙚𝙫 𝙨𝙝𝙖𝙭𝙗𝙤𝙯 ",
+          "joinedAt": "2025-12-08T15:25:22.321042184Z"
+        },
+        {
+          "userId": 7516889322,
+          "name": "Komila Ashurovna",
+          "joinedAt": "2025-12-08T16:49:40.804754213Z"
         }
       ],
       "createdAt": "2025-12-08T15:51:32.290355357Z",
       "link": "https://t.me/+6A-8QS7pdQ1lMjFi"
     },
     "8121753090": {
-      "userName": "User 8121753090",
+      "userName": "Dilnoza Sharafiddinovna",
       "userUsername": "@Sharaf1ddinovna_08",
-      "inviteCount": 1,
+      "inviteCount": 2,
       "referrals": [
         {
           "userId": 6566972747,
           "name": "Ilyos Shaydullayev",
           "joinedAt": "2025-12-08T16:34:41.984136137Z"
+        },
+        {
+          "userId": 900098488,
+          "name": "B.Xolmurodova",
+          "joinedAt": "2025-12-08T12:54:58.022188791Z"
         }
       ],
       "createdAt": "2025-12-08T16:34:41.984136137Z",
-      "link": "https://t.me/+X-JwRIgFl2JlZTMy"
+      "link": "https://t.me/+MQ5nOnAju_E0ZjRi"
     },
     "8309167310": {
       "userName": "♡♡Zumrad♡♡",
@@ -165,12 +355,161 @@
       "link": "https://t.me/+cqgWpXZwwyg4NzEy"
     },
     "6566972747": {
-      "link": "https://t.me/+_2rbhaaD_881N2M6",
-      "inviteCount": 0,
-      "referrals": [],
-      "userName": "Ilyos Shaydullayev",
-      "userUsername": "@ilyosshaydullayev",
-      "createdAt": "2025-12-08T16:59:28.031Z"
+      "userName": "User 6566972747",
+      "userUsername": "",
+      "inviteCount": 1,
+      "referrals": [
+        {
+          "userId": 6566972747,
+          "name": "Ilyos Shaydullayev",
+          "joinedAt": "2025-12-07T16:08:46.440023085Z"
+        }
+      ],
+      "createdAt": "2025-12-07T16:08:46.440023085Z",
+      "link": "https://t.me/+_DJC8KyrPhQyNDQy"
+    },
+    "7431940447": {
+      "userName": "Sevinch",
+      "userUsername": "",
+      "inviteCount": 11,
+      "referrals": [
+        {
+          "userId": 6082228709,
+          "name": "Charos Abduraxmonova",
+          "joinedAt": "2025-12-08T06:20:17.502807209Z"
+        },
+        {
+          "userId": 1217759592,
+          "name": "Mohichehra_Abdurasulovna.",
+          "joinedAt": "2025-12-08T06:23:17.841939719Z"
+        },
+        {
+          "userId": 5542118258,
+          "name": "Dilshoda Ishmurzayeva",
+          "joinedAt": "2025-12-08T06:27:38.858555848Z"
+        },
+        {
+          "userId": 7208790721,
+          "name": "feruza_ergashova🎀",
+          "joinedAt": "2025-12-08T06:32:59.780820502Z"
+        },
+        {
+          "userId": 6524539481,
+          "name": "888",
+          "joinedAt": "2025-12-08T06:36:39.906587146Z"
+        },
+        {
+          "userId": 8381271919,
+          "name": "Sабрин.",
+          "joinedAt": "2025-12-08T06:48:52.273592310Z"
+        },
+        {
+          "userId": 7987992144,
+          "name": "Дилобар🦢",
+          "joinedAt": "2025-12-08T07:16:08.550277069Z"
+        },
+        {
+          "userId": 7342297425,
+          "name": "Сабрина",
+          "joinedAt": "2025-12-08T08:16:54.346777639Z"
+        },
+        {
+          "userId": 8190186407,
+          "name": "Nazira Yoʻldoshiva",
+          "joinedAt": "2025-12-08T08:58:34.267329361Z"
+        },
+        {
+          "userId": 8221380351,
+          "name": "Sevara Adilova",
+          "joinedAt": "2025-12-08T09:22:29.404936034Z"
+        },
+        {
+          "userId": 8467407700,
+          "name": "S.B",
+          "joinedAt": "2025-12-08T10:02:06.976638081Z"
+        }
+      ],
+      "createdAt": "2025-12-08T06:19:38.128375828Z",
+      "link": "https://t.me/+KkAAjZDLJjA2ZDBi"
+    },
+    "7673767291": {
+      "userName": "Маржона Режабова",
+      "userUsername": "",
+      "inviteCount": 14,
+      "referrals": [
+        {
+          "userId": 7463343795,
+          "name": "Gulboyeva. H",
+          "joinedAt": "2025-12-08T14:22:30.110453583Z"
+        },
+        {
+          "userId": 8384970855,
+          "name": "Уктамовна",
+          "joinedAt": "2025-12-08T14:24:20.354406865Z"
+        },
+        {
+          "userId": 8305083699,
+          "name": "𝓙𝓸𝓿𝓵𝓲𝔂𝓮𝓿𝓪 𝓷𝓪𝔃𝓲𝓻𝓪ღ",
+          "joinedAt": "2025-12-08T14:30:11.581620998Z"
+        },
+        {
+          "userId": 7154816171,
+          "name": "𝑫𝒊𝒍𝒐𝒓𝒐𝒎 𝑨𝒃𝒊𝒍𝒐𝒗𝒂",
+          "joinedAt": "2025-12-08T14:30:41.710888768Z"
+        },
+        {
+          "userId": 7532778115,
+          "name": "Normõminova Ziyoda",
+          "joinedAt": "2025-12-08T14:37:44.946612707Z"
+        },
+        {
+          "userId": 8461985098,
+          "name": "Zulfiya Yuldasheva",
+          "joinedAt": "2025-12-08T14:43:24.440723471Z"
+        },
+        {
+          "userId": 7774538352,
+          "name": "❲꯭❀꯭❳꯭꯭🌸꯭ꯨ🕊️꯭ꯨ꯭ ꯭Abdihamidova Shahnoza ✾꯭🍫꯭꯭🌸꯭꯭꯭꯭꯭꯭꯭꯭≽",
+          "joinedAt": "2025-12-08T14:46:08.855514670Z"
+        },
+        {
+          "userId": 8243542928,
+          "name": "Nozima",
+          "joinedAt": "2025-12-08T14:46:58.082561489Z"
+        },
+        {
+          "userId": 5828229801,
+          "name": "❃og'abek❃",
+          "joinedAt": "2025-12-08T14:49:47.287457930Z"
+        },
+        {
+          "userId": 7712676049,
+          "name": "Sevinch",
+          "joinedAt": "2025-12-08T14:54:06.927070703Z"
+        },
+        {
+          "userId": 8096760911,
+          "name": "Nafosat ♡",
+          "joinedAt": "2025-12-08T14:58:16.033977964Z"
+        },
+        {
+          "userId": 8300557631,
+          "name": ".",
+          "joinedAt": "2025-12-08T15:04:23.809094962Z"
+        },
+        {
+          "userId": 7917114723,
+          "name": "__NOZIMA🤍",
+          "joinedAt": "2025-12-08T15:08:45.210232516Z"
+        },
+        {
+          "userId": 8236783257,
+          "name": "Farida Haydarova",
+          "joinedAt": "2025-12-08T15:25:51.568572699Z"
+        }
+      ],
+      "createdAt": "2025-12-08T14:22:30.110453583Z",
+      "link": "https://t.me/+65Pb5AcxmmA0Nzky"
     }
   },
   "linkToUser": {
@@ -180,12 +519,15 @@
     "https://t.me/+cqgWpXZwwyg4NzEy": 8309167310,
     "https://t.me/+X-JwRIgFl2JlZTMy": 8121753090,
     "https://t.me/+znN8DRAT651jYjRi": 6546884474,
-    "https://t.me/+_2rbhaaD_881N2M6": 6566972747,
-    "https://t.me/+XyGcvqPJRO84YmIy": 8121753090,
-    "https://t.me/+QlrphQvW_8tjMjEy": 6546884474,
-    "https://t.me/+Oq6BI1cwT_RjZDMy": 6546884474,
+    "https://t.me/+_DJC8KyrPhQyNDQy": 6566972747,
+    "https://t.me/+MQ5nOnAju_E0ZjRi": 8121753090,
+    "https://t.me/+lJPN0zpPMngyYjJi": 5770316783,
+    "https://t.me/+Nbxvi_APNL5hNTMy": 7188280494,
+    "https://t.me/+KkAAjZDLJjA2ZDBi": 7431940447,
     "https://t.me/+v9rXrl-0nzwzY2Ey": 8447983190,
-    "https://t.me/+6A-8QS7pdQ1lMjFi": 8112698547
+    "https://t.me/+65Pb5AcxmmA0Nzky": 7673767291,
+    "https://t.me/+6A-8QS7pdQ1lMjFi": 8112698547,
+    "https://t.me/+Oq6BI1cwT_RjZDMy": 6546884474
   },
-  "lastUpdated": "2025-12-08T22:39:59.928857"
+  "lastUpdated": "2025-12-09T00:25:00.000000"
 }
