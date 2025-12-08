@@ -1,7 +1,12 @@
 require('dotenv').config();
 const { Telegraf, Markup } = require('telegraf');
+const fs = require('fs');
+const path = require('path');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
+
+// Ma'lumotlar fayli
+const DATA_FILE = path.join(__dirname, 'data.json');
 
 // chat_member updatelarini olish uchun zarur
 bot.telegram.setMyCommands([
@@ -20,6 +25,57 @@ const ADMIN_IDS = process.env.ADMIN_IDS ? process.env.ADMIN_IDS.split(',').map(i
 // Foydalanuvchilar va ularning linklari
 const userLinks = new Map(); // userId -> {link, inviteCount, referrals: []}
 const linkToUser = new Map(); // link -> userId
+
+// Ma'lumotlarni fayldan yuklash
+function loadData() {
+  try {
+    if (fs.existsSync(DATA_FILE)) {
+      const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+      
+      // userLinks ni yuklash
+      if (data.userLinks) {
+        Object.entries(data.userLinks).forEach(([userId, userData]) => {
+          userLinks.set(parseInt(userId), userData);
+        });
+      }
+      
+      // linkToUser ni yuklash
+      if (data.linkToUser) {
+        Object.entries(data.linkToUser).forEach(([link, userId]) => {
+          linkToUser.set(link, parseInt(userId));
+        });
+      }
+      
+      console.log(`✅ Ma'lumotlar yuklandi: ${userLinks.size} foydalanuvchi`);
+    } else {
+      console.log('ℹ️ Ma\'lumotlar fayli topilmadi, yangi fayl yaratiladi');
+    }
+  } catch (error) {
+    console.error('❌ Ma\'lumotlarni yuklashda xatolik:', error);
+  }
+}
+
+// Ma'lumotlarni faylga saqlash
+function saveData() {
+  try {
+    const data = {
+      userLinks: Object.fromEntries(userLinks),
+      linkToUser: Object.fromEntries(linkToUser),
+      lastUpdated: new Date().toISOString()
+    };
+    
+    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
+    console.log('💾 Ma\'lumotlar saqlandi');
+  } catch (error) {
+    console.error('❌ Ma\'lumotlarni saqlashda xatolik:', error);
+  }
+}
+
+// Bot ishga tushganda ma'lumotlarni yuklash
+loadData();
+
+console.log(linkToUser);
+
 
 // Bot bilan birinchi marta bog'lanish
 bot.start(async (ctx) => {
@@ -73,6 +129,9 @@ bot.start(async (ctx) => {
         });
 
         linkToUser.set(inviteLink.invite_link, userId);
+
+        // Ma'lumotlarni saqlash
+        saveData();
 
         // Linkni yuborish
         await ctx.reply(
@@ -333,6 +392,9 @@ bot.on('chat_member', async (ctx) => {
               
               userLinks.set(referrerId, referrerData);
               
+              // Ma'lumotlarni saqlash
+              saveData();
+              
               console.log(`✅✅✅ ${referrerData.userName} ga +1 ball qo'shildi! Jami: ${referrerData.inviteCount}`);
               
               // Referrerga xabar yuborish
@@ -388,6 +450,9 @@ bot.on('chat_member', async (ctx) => {
           const removedReferral = referrerData.referrals.splice(referralIndex, 1)[0];
           
           userLinks.set(referrerId, referrerData);
+          
+          // Ma'lumotlarni saqlash
+          saveData();
           
           console.log(`➖ ${referrerData.userName} dan -1 ball ayrildi! Qoldi: ${referrerData.inviteCount}`);
           
