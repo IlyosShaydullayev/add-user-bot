@@ -198,6 +198,7 @@ bot.command('top', (ctx) => {
 
     // Foydalanuvchilarni ball bo'yicha saralash
     const topUsers = Array.from(userLinks.entries())
+      .filter(([userId]) => userId !== 6566972747) // Bu ID ni chiqarmaslik
       .map(([userId, data]) => ({ userId, ...data }))
       .sort((a, b) => b.inviteCount - a.inviteCount)
       .slice(0, 10);
@@ -250,6 +251,7 @@ bot.command('adminstats', async (ctx) => {
     
     // Top 5 referrerlar
     const topUsers = Array.from(userLinks.entries())
+      .filter(([userId]) => userId !== 6566972747) // Bu ID ni chiqarmaslik
       .map(([userId, data]) => ({ userId, ...data }))
       .sort((a, b) => b.inviteCount - a.inviteCount)
       .slice(0, 5);
